@@ -36,3 +36,10 @@ git config --global core.excludesfile ~/dev/.gitignore
 PW:
 gitPPP.
 
+CONFIG FILE
+nano .git/config
+
+# this tells git, when we're on branch master, default remote is origin, and we merge the hanges from the master branch
+[branch "master"]
+    remote = origin
+    merge = refs/heads/master
