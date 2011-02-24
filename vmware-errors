@@ -1,5 +1,4 @@
 >http://e5.onthehub.com/d.ashx?s=huvcko0x4r
-anze.pecar...
 
 Was weird and I  did a number of fixes:
 
@@ -13,9 +12,6 @@ Was weird and I  did a number of fixes:
 	tar xvf /usr/lib/vmware/modules/source/vmmon.tar -C /tmp
 	perl -pi -e 's,_range,,' vmmon-only/linux/iommu.c
 	tar cvf /usr/lib/vmware/modules/source/vmmon.tar vmmon-only
-
-
-
 
 x. At one point i tried this:
 

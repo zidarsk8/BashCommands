@@ -5,7 +5,7 @@ Installing an official release
 3. Change into the directory created in step 2 (e.g. cd Django-NNN).
 4. sudo python setup.py install
 
-Before upgrading uninstall:
+Uninstall:
 
 If you installed Django using setup.py install, uninstalling is as simple as deleting the django directory from your Python site-packages.
 
@@ -15,4 +15,6 @@ python -c "from distutils.sysconfig import get_python_lib; print get_python_lib(
 
 /usr/local/lib/python2.6/dist-packages
 
+Upgrade:
 
+Uninstall then install again...

@@ -10,9 +10,6 @@ Account Admin/API Token
 $ git config --global github.user Smotko
 $ git config --global github.token c98e6262ab13d58da96389ab41632f7e
 
-
-
-
 NEW REPO:
 
 $ mkdir new-project
@@ -32,7 +29,3 @@ $ git pull origin master
 
 IGNORE FILES:
 git config --global core.excludesfile ~/dev/.gitignore 
-
-PW:
-gitPPP.
-
