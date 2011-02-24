@@ -1,0 +1,13 @@
+Install LaTeX:
+
+1. sudo apt-get install texlive-full
+
+Gedit plugin: 
+
+1. sudo apt-get install gedit-latex-plugin
+
+OR 
+
+1. Download from http://sourceforge.net/projects/gedit-latex/files/
+
+2. Extract to folder /home/smotko/.gnome2/gedit/plugins
