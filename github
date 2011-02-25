@@ -1,7 +1,5 @@
 SETUP:
 1. Generate public key: http://help.github.com/linux-key-setup/
-x. If you don't want to type in your password everytime:
-$ ssh-add ~/.ssh/id_rsa
 2. Setup user name, email:
 $ git config --global user.name "Smotko"
 $ git config --global user.email "ensmotko@gmail.com"
