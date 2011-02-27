@@ -1,0 +1,46 @@
+
+First thing i do when i install a clean ubuntu 10.10
+
+
+
+#maverick sudo apt-get key error - import all new keys
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 40976EAF437D05B5
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 16126D3A3E5C1192
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys A040830F7FAC5991
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 40976EAF437D05B5
+
+# ubuntu uses dash witch is a lightweigt version of bash and it's no good for compiling
+sudo ln -sf /bin/bash /bin/sh
+
+#installing synapse launcher
+sudo add-apt-repository ppa:synapse-core/ppa
+sudo apt-get update && sudo apt-get install synapse
+
+#installing virtual box
+sudo add-apt-repository "deb http://download.virtualbox.org/virtualbox/debian maverick non-free"
+wget -q http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc -O- | sudo apt-key add -
+#remove last line from sources, that now contains deb-src from virtual box.
+sudo sed -i '/$d' filename.txt
+sudo apt-get update 
+sudo apt-get install virtualbox-3.2 
+sudo /etc/init.d/vboxdrv setup
+
+#installing some usefull stuff
+sudo apt-get install rar unrar zip unzip mc vlc ktorrent amarok xsensors sensors-applet build-essential libncurses5-dev bison flex gettext texinfo subversion
+
+#installing sun java 
+sudo add-apt-repository ppa:sun-java-community-team/sun-java6
+sudo apt-get update
+sudo apt-get install sun-java6-jre sun-java6-source sun-java6-jdk
+#make sun java default
+sudo update-alternatives --config java
+
+#installing ubuntu tweak
+sudo add-apt-repository ppa:tualatrix/ppa
+sudo apt-get update
+sudo apt-get install ubuntu-tweak
+
+#removing packages
+sudo apt-get remove transmission-gtk
+
+
