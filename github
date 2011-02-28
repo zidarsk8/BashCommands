@@ -35,3 +35,9 @@ nano .git/config
 [branch "master"]
     remote = origin
     merge = refs/heads/master
+
+
+USEFULL GIT COMMANDS
+#revert branch one commit 
+git reset --soft HEAD^
+
