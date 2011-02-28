@@ -3,4 +3,4 @@ RENAMING FILES:
 for file in foo.*; do mv {${file%%.*},bar}.${file#*.} ; done
 
 DELETE ALL SVN FOLDERS:
-find . -name ".svn" -exec rm -rf {} \;
+find . -name ".svn" -type d -exec rm -rf {} \;
