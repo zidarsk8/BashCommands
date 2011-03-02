@@ -1,43 +1,56 @@
+############# GITHUB SPECIFIC ############# 
+
 SETUP:
-1. Generate public key: http://help.github.com/linux-key-setup/
-2. Setup user name, email:
-$ git config --global user.name "Smotko"
-$ git config --global user.email "ensmotko@gmail.com"
-3. Token:
+Generate public key: 
+    ssh-keygen -t rsa #TYPE-A-PASSWORD
+
+Setup user name, email:
+    git config --global user.name "Smotko"
+    git config --global user.email "ensmotko@gmail.com"
+
 Account Admin/API Token
-$ git config --global github.user Smotko
-$ git config --global github.token c98e6262ab13d58da96389ab41632f7e
+    git config --global github.user User
+    git config --global github.token c98e6262ab13d58da96389ab41632f7e
 
 NEW REPO:
 
-$ mkdir new-project
-$ cd new-project
-$ git init
-$ touch README
-$ git add README
-$ git commit
-$ git remote add origin git@github.com:Smotko/new-project.git
-$ git push origin master
+    mkdir new-project
+    cd !$
+    git init
+    touch README
+    git add !$
+    git commit -am "Initial commit"
+    git remote add origin git@github.com:User/new-project.git
+    git push origin master
 
-OLD REPO:
-$ mkdir old-project
-$ cd old-project
-$ git remote add origin git@github.com:Smotko/old-project.git
-$ git pull origin master
+CLONE REPO:
+    mkdir clone-project
+    cd !$
+    git init
+    git remote add origin git@github.com:Smotko/old-project.git
+    git pull origin master
+
+############# GIT #############
 
 IGNORE FILES:
-git config --global core.excludesfile ~/dev/.gitignore 
+    git config --global core.excludesfile ~/.gitignore 
+    touch ~/.gitignore
+
+add .ext and ~ to ignore extentions     
+    echo "*.ext" >> ~/.gitignore 
+    echo "*~" >> ~/.gitignore 
 
 CONFIG FILE
-nano .git/config
+    nano .git/config
 
-# this tells git, when we're on branch master, default remote is origin, and we merge the hanges from the master branch
+this tells git, when we're on branch master, default remote is origin, and we merge the hanges from the master branch
 [branch "master"]
     remote = origin
     merge = refs/heads/master
 
 
-USEFULL GIT COMMANDS
-#revert branch one commit 
-git reset --soft HEAD^
+############# USEFULL GIT COMMANDS #############
+
+revert branch one commit 
+    git reset --soft HEAD^
 

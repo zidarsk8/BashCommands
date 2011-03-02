@@ -1,0 +1,95 @@
+############ RANDOM #############
+
+installing synapse launcher
+
+    sudo add-apt-repository ppa:synapse-core/ppa
+    sudo apt-get update && sudo apt-get install synapse
+
+
+installing virtual box
+
+    sudo add-apt-repository "deb http://download.virtualbox.org/virtualbox/debian maverick non-free"
+    wget -q http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc -O- | sudo apt-key add -
+remove last line from sources, that now contains deb-src from virtual box.
+    sudo sed -i '/$d' filename.txt
+    sudo apt-get update 
+    sudo apt-get install virtualbox-3.2 
+    sudo /etc/init.d/vboxdrv setup
+
+
+installing some usefull stuff
+
+    sudo apt-get install git-core rar unrar zip unzip mc vlc ktorrent amarok xsensors sensors-applet build-essential libncurses5-dev bison flex gettext texinfo subversion
+
+
+installing sun java 
+
+    sudo add-apt-repository ppa:sun-java-community-team/sun-java6
+    sudo apt-get update
+    sudo apt-get install sun-java6-jre sun-java6-source sun-java6-jdk sun-java6-plugin
+make sun java default
+    sudo update-alternatives --config java
+
+
+installing ubuntu tweak
+
+    sudo add-apt-repository ppa:tualatrix/ppa
+    sudo apt-get update
+    sudo apt-get install ubuntu-tweak
+
+
+removing packages i don't like
+
+    sudo apt-get remove transmission-gtk
+
+
+############ LATEX #############
+
+Install LaTeX and Gedit plugin:
+    sudo apt-get install texlive-full
+    sudo apt-get install gedit-latex-plugin
+
+
+############ DJANGO #############
+
+Installing an official release where ### is the latest version number
+http://www.djangoproject.com/download/
+
+    wget http://www.djangoproject.com/download/###/tarball/
+    tar xzvf Django-###.tar.gz
+    cd Django-###
+    sudo python setup.py install
+
+
+Uninstall:
+
+If you installed Django using setup.py install, uninstalling is as simple as deleting the django directory from your Python site-packages.
+Where are site-packages?
+
+    python -c "from distutils.sysconfig import get_python_lib; print get_python_lib()"
+
+Upgrade:
+Uninstall then install again...
+
+
+############ POSTGRES #############
+
+INSTALL:
+
+    sudo apt-get install postgresql
+    sudo apt-get install pgadmin3
+
+SETUP:
+
+password:
+    sudo -u postgres psql postgres
+    # \password postgres
+
+create db:
+    sudo -u postgres createdb thedb
+
+BACKUP:
+    /usr/bin/pg_dump --username postgres --format custom --blobs --verbose --file "/home/backup" tablename
+
+############ #############
+ 

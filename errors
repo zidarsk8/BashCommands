@@ -1,0 +1,34 @@
+########## maverick sudo apt-get key error - import all new keys #############
+
+    sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 40976EAF437D05B5
+    sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 16126D3A3E5C1192
+    sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys A040830F7FAC5991
+    sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 40976EAF437D05B5
+
+
+########## wmware errors ##########
+
+>http://e5.onthehub.com/d.ashx?s=huvcko0x4r
+
+Was weird and I did a number of fixes:
+
+1. The patch from here:
+
+	https://answers.launchpad.net/vmware-ubuntu/+question/128677
+
+2. And this code here:
+
+	cd /tmp
+	tar xvf /usr/lib/vmware/modules/source/vmmon.tar -C /tmp
+	perl -pi -e 's,_range,,' vmmon-only/linux/iommu.c
+	tar cvf /usr/lib/vmware/modules/source/vmmon.tar vmmon-only
+
+x. At one point i tried this:
+
+    cd /tmp
+    tar xvf /usr/lib/vmware/modules/source/vmmon.tar -C /tmp
+    perl -pi -e 's,_range,,' vmmon-only/linux/iommu.c
+    tar cvf /usr/lib/vmware/modules/source/vmmon.tar vmmon-only
+
+
+
