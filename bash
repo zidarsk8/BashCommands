@@ -10,8 +10,12 @@
     nano /home/user/path/to/file/that/i/dont/want/to/type/again.sh
     chmod 755 !$
 
-ctrl+r -find some previous command from bash history
-
+ctrl+r - find some previous command from bash history
+ctrl+a - go to the beginning of the line
+ctrl+e - go to the end of the line
+ctrl+z - suspend current process. fg restores it
+ctrl+u - clears the line before the cursor
+ctrl+k - clears the line after the cursor
     
 ########## CHANGING PERMISSIONS ########## 
 
