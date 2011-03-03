@@ -9,6 +9,9 @@
 
     nano /home/user/path/to/file/that/i/dont/want/to/type/again.sh
     chmod 755 !$
+
+ctrl+r -find some previous command from bash history
+
     
 ########## CHANGING PERMISSIONS ########## 
 
