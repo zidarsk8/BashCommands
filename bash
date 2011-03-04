@@ -16,6 +16,25 @@ ctrl+e - go to the end of the line
 ctrl+z - suspend current process. fg restores it
 ctrl+u - clears the line before the cursor
 ctrl+k - clears the line after the cursor
+
+
+########## JOB CONTROL ##########
+
+Run in background
+
+    yourcommand &
+
+Bring to foreground
+
+    fg %jobid
+
+Resume in background (if you won't the job to be running after ctrl+z)
+
+    bg %jobid
+
+List all jobs
+
+    jobs
     
 ########## CHANGING PERMISSIONS ########## 
 
