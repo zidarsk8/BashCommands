@@ -90,3 +90,6 @@ delete all .svn folders
 #same thing a bit faster, but doesn't work with a large number of files
     
     sudo find /var/www -type f -print | xargs sudo chmod 644    
+
+######## ENABLE WEBGL IN CHROME ##########
+google-chrome --ignore-gpu-blacklist
