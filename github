@@ -5,12 +5,12 @@ Generate public key:
     ssh-keygen -t rsa #TYPE-A-PASSWORD
 
 Setup user name, email:
-    git config --global user.name "Smotko"
-    git config --global user.email "ensmotko@gmail.com"
+    git config --global user.name "User"
+    git config --global user.email "user@mail.fake"
 
 Account Admin/API Token
     git config --global github.user User
-    git config --global github.token c98e6262ab13d58da96389ab41632f7e
+    git config --global github.token c98e6262ab13s58da96389ab41632f7e
 
 NEW REPO:
 
@@ -27,7 +27,7 @@ CLONE REPO:
     mkdir clone-project
     cd !$
     git init
-    git remote add origin git@github.com:Smotko/old-project.git
+    git remote add origin git@github.com:User/old-project.git
     git pull origin master
 
 ############# GIT #############

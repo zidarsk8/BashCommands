@@ -10,8 +10,31 @@
     nano /home/user/path/to/file/that/i/dont/want/to/type/again.sh
     chmod 755 !$
 
-ctrl+r -find some previous command from bash history
+ctrl+r - find some previous command from bash history
+ctrl+a - go to the beginning of the line
+ctrl+e - go to the end of the line
+ctrl+z - suspend current process. fg restores it
+ctrl+u - clears the line before the cursor
+ctrl+k - clears the line after the cursor
 
+
+########## JOB CONTROL ##########
+
+Run in background
+
+    yourcommand &
+
+Bring to foreground
+
+    fg %jobid
+
+Resume in background (if you won't the job to be running after ctrl+z)
+
+    bg %jobid
+
+List all jobs
+
+    jobs
     
 ########## CHANGING PERMISSIONS ########## 
 
@@ -67,3 +90,6 @@ delete all .svn folders
 #same thing a bit faster, but doesn't work with a large number of files
     
     sudo find /var/www -type f -print | xargs sudo chmod 644    
+
+######## ENABLE WEBGL IN CHROME ##########
+google-chrome --ignore-gpu-blacklist
