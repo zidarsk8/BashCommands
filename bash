@@ -91,5 +91,23 @@ delete all .svn folders
     
     sudo find /var/www -type f -print | xargs sudo chmod 644    
 
-######## ENABLE WEBGL IN CHROME ##########
-google-chrome --ignore-gpu-blacklist
+######## ENABLE WEBGL ##########
+
+Get the xorg edgers ppa: https://launchpad.net/~xorg-edgers/+archive/radeon
+
+    deb http://ppa.launchpad.net/xorg-edgers/radeon/ubuntu maverick main 
+    
+Fire up chrome:
+    
+    google-chrome --ignore-gpu-blacklist
+    
+or firefox:
+    
+    MOZ_GLX_IGNORE_BLACKLIST=1 firefox-4.0
+    
+I also installed:
+
+    sudo apt-get install libgles2-mesa libegl1-mesa
+
+but I'm not sure if this had anything to do with webgl :)
+    
