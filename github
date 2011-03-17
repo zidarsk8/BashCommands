@@ -119,6 +119,11 @@ or
     git checkout zidar
     git pull origin zidar
     git pull origin branch1
+    
+undo a merge/pull:
+
+    git reset --hard
+    
 
 
 
