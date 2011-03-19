@@ -10,12 +10,41 @@
     nano /home/user/path/to/file/that/i/dont/want/to/type/again.sh
     chmod 755 !$
 
+!command - repeat last command
+
+    find / -name "bla"
+    !find
+    find / -name "bla"
+
 ctrl+r - find some previous command from bash history
 ctrl+a - go to the beginning of the line
 ctrl+e - go to the end of the line
 ctrl+z - suspend current process. fg restores it
 ctrl+u - clears the line before the cursor
 ctrl+k - clears the line after the cursor
+
+########## FIND #########
+
+Finding files which has been modified less than one day:
+
+	find . -mtime -1
+
+List all the files and directories in the box which holds the 777 permission:
+
+	find . -perm 777 –print
+
+Case insensitive search -i
+
+	find . –iname "foO" –print
+
+Delete files that you find:
+
+	find . -name *.foo -print | xargs rm –f
+
+Find files with the word foo:
+
+	find . –name *.txt –print | xargs grep “foo”
+
 
 
 ########## JOB CONTROL ##########
