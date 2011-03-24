@@ -67,6 +67,9 @@ If you installed Django using setup.py install, uninstalling is as simple as del
 Where are site-packages?
 
     python -c "from distutils.sysconfig import get_python_lib; print get_python_lib()"
+    
+    #### Did this but the path returned was /usr/lib/python2.6/dist-packages but django was in /usr/local/lib/python2.6/dist-packages
+
 
 Upgrade:
 Uninstall then install again...
