@@ -23,6 +23,22 @@ ctrl+z - suspend current process. fg restores it
 ctrl+u - clears the line before the cursor
 ctrl+k - clears the line after the cursor
 
+########## REDIRECT OUTPUT TO CLIPBOARD ##########
+
+You need xclip:
+    
+    sudo apt-get install xclip
+
+Pipe into the clipboard:
+
+    cat foo.bar | xclip
+
+foo.bar is now in you "middle click" clipboard.
+
+If you want to use "ctrl+v":
+
+    cat foo.bar | xclip -sel clip 
+
 ########## FIND #########
 
 Finding files which has been modified less than one day:
