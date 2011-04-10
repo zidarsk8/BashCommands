@@ -156,3 +156,22 @@ I also installed:
 
 but I'm not sure if this had anything to do with webgl :)
     
+######### HOSTS IN SSH #########
+
+You can make shortcuts for your favorite ssh hosts
+
+Add a ~/.ssh/config file and write:
+
+     Host derp
+     HostName derp.herp.berp.net
+     User derpyherpy
+
+Now instead of typing
+
+     ssh derpyherpy@derp.herp.berp.net
+
+You can type
+
+     ssh derp
+
+(This also works for scp)
