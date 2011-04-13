@@ -16,6 +16,16 @@ ctrl+e - go to the end of the line
 ctrl+z - suspend current process. fg restores it
 ctrl+u - clears the line before the cursor
 ctrl+k - clears the line after the cursor
+
+########## SED - quick text file manipulation ########## 
+
+remove a specific line from a file
+    
+    sed -i "4 d" file #where 4 is the line to be delited
+
+change some text in files
+
+    sed -i 's/foo/bar/g' files # or *.sh .. or something
     
 ########## CHANGING PERMISSIONS ########## 
 
@@ -54,9 +64,7 @@ renames prefix foo* with bar* (but must have .extension)
 quick rename 
 
     mv /path/to/fileOld /path/to/fileNew
-
 or
-
     mv /path/to/file{Old,New}
 
 delete all .svn folders
@@ -71,3 +79,4 @@ delete all .svn folders
 #same thing a bit faster, but doesn't work with a large number of files
     
     sudo find /var/www -type f -print | xargs sudo chmod 644    
+
