@@ -54,3 +54,79 @@ this tells git, when we're on branch master, default remote is origin, and we me
 revert branch one commit 
     git reset --soft HEAD^
 
+
+
+
+############# USING GIT - moving around #############
+
+listing all branches - branches with origin/ prefix are branches on the remote server.
+"*" points to your current branch
+
+    git branch -a
+    
+* master
+  zidar
+  origin/HEAD
+  origin/branch1
+  origin/master
+  origin/testBranch
+  origin/zidar
+
+changing branches (use previous command to see if it worked)
+
+    git checkout zidar
+    
+
+changing to remote branches (we cant go to origin/testBranch, since that's a remote branch)
+this creates a new local testBranch branch, derived from origin/testBranch
+
+    git checkout -t origin/testBranch
+
+we check to see if ti worked    
+    
+    git branch -a
+    
+* testBranch
+  master
+  zidar
+  origin/HEAD
+  origin/branch1
+  origin/master
+  origin/testBranch
+  origin/zidar
+    
+
+############# USING GIT - fetching pushing pulling and merging #############
+
+to download all remote branches that have been changed, we use
+    git fetch
+
+to download just one specific branch from the remote repository 
+    git fetch origin zidar
+
+these commands will onlly affect remote branches in the last example "origin/zidar" 
+
+
+to merge changes done in origin zidar and branch1 we need to move to zidar branch and merge
+
+    git checkout zidar
+    git fetch 
+    git merge origin/zidar
+    git merge origin/branch1
+
+or 
+
+    git checkout zidar
+    git pull origin zidar
+    git pull origin branch1
+    
+undo a merge/pull:
+
+    git reset --hard
+    
+
+
+
+
+
+
