@@ -175,6 +175,30 @@ You can type
      ssh derp
 
 (This also works for scp)
+for more info 
+     man ssh_config
+
+############# SSH TUNNELS #############
+
+lets say you want to ssh to a computer that's hidden behind a firelwall 
+
+yourComp ---------- firewallyComp -------- destinationComp
+
+     ssh -L10000:localhost:10001 firewallComp
+     ssh -L10001:localhost:22 destinationComp
+
+now you've just created a tunnel for your destinationComp and you can:
+
+copy files directly from your computer to destination computer
+
+     scp -P10000 file/I/Want/To.copy localhost:/home/Me/
+
+or make another ssh tunnel to your destination comp
+
+     ssh -p10000 -L 80:localhost:80 localhost
+
+now you your port 80 will be directed to destinationComp port 80. 
+notice how ssh has "p" and scp uses "P" for port.
 
 ############# REMOVES PHP REDIRECT TO SCAREWARE PAGE ###########
 
