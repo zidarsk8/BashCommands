@@ -188,3 +188,12 @@ These are the commands I used to remove the above line of code from every .php f
      find $dir -name "*.php" -type f | xargs sed -i '/./,$!d' 2>&1
 
 (The first line removes the actual code while the second line removes the whitespace)
+
+
+
+############### ADD PYTHON TO NETBEANS 7.0 #################
+
+Just go to Tools->Plugins, click Settings. Click Add, and add a new "Update Center", 
+name it like "Python plugin is here", and in the link, paste this: 
+
+	http://deadlock.netbeans.org/hudson/job/nbms-and-javadoc/lastStableBuild/artifact/nbbuild/nbms/updates.xml.gz 
