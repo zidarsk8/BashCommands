@@ -23,6 +23,7 @@ ctrl+z - suspend current process. fg restores it
 ctrl+u - clears the line before the cursor
 ctrl+k - clears the line after the cursor
 
+<<<<<<< HEAD
 ########## SED - quick text file manipulation ########## 
 
 remove a specific line from a file
@@ -32,7 +33,7 @@ remove a specific line from a file
 change some text in files
 
     sed -i 's/foo/bar/g' files # or *.sh .. or something
-
+=======
 ########## REDIRECT OUTPUT TO CLIPBOARD ##########
 
 You need xclip:
@@ -90,6 +91,7 @@ Resume in background (if you won't the job to be running after ctrl+z)
 List all jobs
 
     jobs
+>>>>>>> origin/master
     
 ########## CHANGING PERMISSIONS ########## 
 
@@ -128,9 +130,7 @@ renames prefix foo* with bar* (but must have .extension)
 quick rename 
 
     mv /path/to/fileOld /path/to/fileNew
-
 or
-
     mv /path/to/file{Old,New}
 
 delete all .svn folders
@@ -146,6 +146,8 @@ delete all .svn folders
     
     sudo find /var/www -type f -print | xargs sudo chmod 644    
 
+<<<<<<< HEAD
+=======
 ######## ENABLE WEBGL ##########
 
 Get the xorg edgers ppa: https://launchpad.net/~xorg-edgers/+archive/radeon
@@ -210,13 +212,6 @@ or make another ssh tunnel to your destination comp
 now you your port 80 will be directed to destinationComp port 80. 
 notice how ssh has "p" and scp uses "P" for port.
 
-############# Mount folder/filesystem through SSH  #############
-
-Install SSHFS from http://fuse.sourceforge.net/sshfs.html 
-Will allow you to mount a folder security over a network.
-
-   sshfs name@server:/path/to/folder /path/to/mount/point 
-
 ############# REMOVES PHP REDIRECT TO SCAREWARE PAGE ###########
 
 I while ago every PHP file on my website got this line of code prepended:
@@ -229,10 +224,4 @@ These are the commands I used to remove the above line of code from every .php f
      find $dir -name "*.php" -type f | xargs sed -i '/./,$!d' 2>&1
 
 (The first line removes the actual code while the second line removes the whitespace)
-
-############### ADD PYTHON TO NETBEANS 7.0 #################
-
-Just go to Tools->Plugins, click Settings. Click Add, and add a new "Update Center", 
-name it like "Python plugin is here", and in the link, paste this: 
-
-	http://deadlock.netbeans.org/hudson/job/nbms-and-javadoc/lastStableBuild/artifact/nbbuild/nbms/updates.xml.gz 
+>>>>>>> origin/master
