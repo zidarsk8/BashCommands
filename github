@@ -125,8 +125,15 @@ undo a merge/pull:
     git reset --hard
     
 
+############# GIT REBASE ############
 
+Usefull when you aren't done with your branch but want to pull in changes from master:
 
+     git rebase master
 
+If conflicts occur, edit conflicted file(s) and:
+
+     git add file(s)
+     git rebase --continue
 
 
