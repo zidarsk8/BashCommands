@@ -32,6 +32,9 @@ CLONE REPO:
 
 ############# GIT #############
 
+IGNORE CHMOD:
+    git config core.filemode false
+
 IGNORE FILES:
     git config --global core.excludesfile ~/.gitignore 
     touch ~/.gitignore
