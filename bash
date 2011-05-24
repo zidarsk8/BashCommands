@@ -236,3 +236,8 @@ Just go to Tools->Plugins, click Settings. Click Add, and add a new "Update Cent
 name it like "Python plugin is here", and in the link, paste this: 
 
 	http://deadlock.netbeans.org/hudson/job/nbms-and-javadoc/lastStableBuild/artifact/nbbuild/nbms/updates.xml.gz 
+
+############### COUNTING NUBER OF LINES IN A FILE #########
+
+  find filename -print0 | xargs -0 wc -l 
+
