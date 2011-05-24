@@ -235,9 +235,34 @@ These are the commands I used to remove the above line of code from every .php f
 Just go to Tools->Plugins, click Settings. Click Add, and add a new "Update Center", 
 name it like "Python plugin is here", and in the link, paste this: 
 
-	http://deadlock.netbeans.org/hudson/job/nbms-and-javadoc/lastStableBuild/artifact/nbbuild/nbms/updates.xml.gz 
+     http://deadlock.netbeans.org/hudson/job/nbms-and-javadoc/lastStableBuild/artifact/nbbuild/nbms/updates.xml.gz
 
+################ WORKING WITH DIRECTORIES ################
+
+Current working directory:
+
+     pwd
+
+Go to home directory:
+
+     cd ~
+or    
+     cd
+
+Go to the previous working directory:
+
+     cd -
+
+We can also use the stack (yo-yo list, hehe):
+
+    pushd .   
+
+    popd
+
+Printing the contents of the stack:
+
+    dirs
+ 
 ############### COUNTING NUBER OF LINES IN A FILE #########
 
   find filename -print0 | xargs -0 wc -l 
-
