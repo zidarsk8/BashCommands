@@ -248,7 +248,6 @@ name it like "Python plugin is here", and in the link, paste this:
 
      http://deadlock.netbeans.org/hudson/job/nbms-and-javadoc/lastStableBuild/artifact/nbbuild/nbms/updates.xml.gz
 
-
 ################ WORKING WITH DIRECTORIES ################
 
 Current working directory:
@@ -274,5 +273,7 @@ We can also use the stack (yo-yo list, hehe):
 Printing the contents of the stack:
 
     dirs
+ 
+############### COUNTING NUBER OF LINES IN A FILE #########
 
-
+  find filename -print0 | xargs -0 wc -l 
